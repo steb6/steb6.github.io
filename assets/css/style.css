@@ -344,6 +344,13 @@ main {
 .avatar-box img {
   border-radius: 20px;
   display: block;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.avatar-box img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .info-content .name {
@@ -575,6 +582,221 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+}
+
+
+/**
+ * #ABOUT - ADDITIONAL SECTIONS
+ */
+
+.section-title {
+  color: var(--white-2);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-600);
+  margin-bottom: 20px;
+}
+
+/* Specialization Section */
+.specialization {
+  margin-bottom: 40px;
+}
+
+.specialization-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.specialization-item {
+  background: var(--bg-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--jet);
+  transition: var(--transition-1);
+}
+
+.specialization-item:hover {
+  background: var(--bg-gradient-yellow-1);
+  color: var(--smoky-black);
+}
+
+/* Technical Skills Section */
+.technical-skills {
+  margin-bottom: 40px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-item {
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: var(--transition-1);
+}
+
+.skill-item:hover {
+  background: var(--bg-gradient-yellow-1);
+  transform: translateY(-2px);
+}
+
+.skill-item:hover .skill-title {
+  color: var(--smoky-black);
+}
+
+.skill-title-wrapper {
+  margin-bottom: 0;
+}
+
+.skill-title {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin: 0;
+}
+
+/* Additional Info Section */
+.additional-info {
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.info-section {
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* Conference List */
+.conference-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.conference-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--jet);
+}
+
+.conference-item:last-child {
+  border-bottom: none;
+}
+
+.conference-year {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-6);
+  min-width: 50px;
+}
+
+.conference-name {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+/* Language List */
+.language-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--jet);
+}
+
+.language-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.language-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.language-name {
+  color: var(--white-2);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-6);
+}
+
+.language-level {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
+  font-size: var(--fs-7);
+}
+
+.language-note {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-style: italic;
+}
+
+.language-proficiency {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.proficiency-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--onyx);
+  border: 2px solid var(--jet);
+  transition: var(--transition-1);
+}
+
+.proficiency-dot.active {
+  background: var(--orange-yellow-crayola);
+  border-color: var(--orange-yellow-crayola);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .specialization-list {
+    gap: 8px;
+  }
+  
+  .specialization-item {
+    font-size: var(--fs-7);
+    padding: 6px 12px;
+  }
 }
 
 
@@ -2041,8 +2263,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 15px;
   border-radius: 8px;
   border: 1px solid var(--jet);
-  overflow-x: auto;
+  overflow: hidden; /* Prevent overflow */
   max-width: 100%;
+  box-sizing: border-box;
+  position: relative; /* Add positioning context */
 }
 
 .midi-embed-label {
@@ -2068,21 +2292,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Create a wrapper for horizontal scrolling */
 .midi-visualizer-wrapper {
   width: 100%;
-  max-width: 500px; /* Fixed maximum width */
+  max-width: 100%; /* Allow full width on mobile */
   overflow-x: auto;
   overflow-y: hidden;
   border: 1px solid var(--jet);
   border-radius: 8px;
   background: var(--smoky-black);
   margin: 10px 0;
+  box-sizing: border-box;
+  position: relative; /* Ensure proper positioning */
 }
 
 .midi-visualizer-wrapper midi-visualizer {
   border: none;
   margin: 0;
-  min-width: 800px; /* Force content to be wider than container */
+  min-width: 600px; /* Reduced minimum width for mobile */
   width: max-content;
   display: block !important;
+  max-width: none; /* Allow content to be wider than container */
 }
 
 .midi-embed midi-player {
@@ -2096,16 +2323,46 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Ensure MIDI visualizer SVG content is scrollable */
 .midi-embed midi-visualizer svg,
 .midi-visualizer-wrapper midi-visualizer svg {
-  min-width: 800px;
+  min-width: 600px; /* Reduced for mobile */
   width: max-content;
   height: 100%;
   display: block;
+  max-width: none; /* Allow content to extend beyond container */
+}
+
+/* Special SVG handling for single-item rows (latent space interpolation) */
+.midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer svg {
+  min-width: 400px; /* Smaller for better fit */
+  width: 100%;
+  max-width: 600px; /* Fixed maximum to prevent overflow */
+}
+
+/* Specific handling for latent space interpolation and all single-item rows */
+.midi-embed-row .midi-embed-item:only-child {
+  width: 100%;
+  max-width: 100%;
+  flex: none;
+}
+
+.midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper {
+  width: 100%;
+  max-width: 600px; /* Fixed maximum width */
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
+  min-width: 400px; /* Smaller minimum for better fit */
+  width: 100%;
+  max-width: 600px; /* Match wrapper max-width */
 }
 
 /* Force horizontal scrolling for longer content */
 .midi-visualizer-wrapper {
   scrollbar-width: thin;
   scrollbar-color: var(--orange-yellow-crayola) var(--smoky-black);
+  /* Ensure scrolling works on all screen sizes */
+  -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
 }
 
 .midi-visualizer-wrapper::-webkit-scrollbar {
@@ -2124,6 +2381,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .midi-visualizer-wrapper::-webkit-scrollbar-thumb:hover {
   background: var(--vegas-gold);
+}
+
+/* Ensure all MIDI visualizers have consistent sizing constraints */
+.midi-embed midi-visualizer,
+.midi-visualizer-wrapper midi-visualizer {
+  /* Force consistent minimum widths */
+  min-width: 600px !important;
+  width: max-content !important;
+  max-width: none !important;
+  display: block !important;
 }
 
 /* MIDI Note Styling */
@@ -2248,17 +2515,52 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   .midi-embed-item { 
     min-width: 100%; 
+    padding: 10px;
+    /* Ensure overflow is always hidden */
+    overflow: hidden !important;
   }
   .midi-embed midi-visualizer { 
-    height: 150px; 
+    height: 120px; 
   }
   .midi-embed-scrollable {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  
+  .midi-visualizer-wrapper {
+    max-width: 100%;
+    /* Force scrollability */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+  
+  .midi-visualizer-wrapper midi-visualizer {
+    min-width: 400px !important; /* Smaller minimum for mobile */
+    width: max-content !important;
+    max-width: none !important;
+  }
+  
+  .midi-embed midi-visualizer svg,
+  .midi-visualizer-wrapper midi-visualizer svg {
+    min-width: 400px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+  
+  /* Responsive latent space interpolation */
+  .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper {
+    max-width: 100%; /* Full width on tablets */
+  }
+  
+  .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
+    min-width: 350px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .gen-explorer-controls {
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
   }
   
   .gen-explorer-controls button {
@@ -2272,12 +2574,53 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 }
 
-@media (max-width: 580px) {
-  .midi-embed-scrollable {
-    grid-template-columns: 1fr;
-  }
-  .midi-embed-scrollable .midi-embed-item {
+@media (max-width: 450px) {
+  .midi-embed-item {
+    padding: 8px;
     min-width: 100%;
+    /* Force container constraints */
+    overflow: hidden !important;
+  }
+  
+  .midi-embed midi-visualizer { 
+    height: 100px; 
+  }
+  
+  .midi-visualizer-wrapper {
+    /* Ensure wrapper always provides scrolling */
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    max-width: 100% !important;
+  }
+  
+  .midi-visualizer-wrapper midi-visualizer {
+    min-width: 320px !important; /* Very small screens */
+    width: max-content !important;
+    max-width: none !important;
+  }
+  
+  .midi-embed midi-visualizer svg,
+  .midi-visualizer-wrapper midi-visualizer svg {
+    min-width: 320px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+  
+  /* Small screen latent space interpolation */
+  .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper {
+    max-width: 100%;
+  }
+  
+  .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
+    min-width: 280px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .midi-embed-content {
+    padding: 10px;
+    /* Ensure content area doesn't overflow */
+    overflow: hidden;
   }
 }
 
