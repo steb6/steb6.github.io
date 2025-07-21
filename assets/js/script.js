@@ -290,11 +290,14 @@ document.addEventListener('DOMContentLoaded', function() {
       genVisualizer.src = filePath;
       genPlayer.src = filePath;
       
-      // Force reload of components
+      // Force reload of components by removing and re-adding src
       setTimeout(() => {
-        if (genVisualizer.visualizer) {
-          genVisualizer.visualizer.reload();
-        }
+        genVisualizer.removeAttribute('src');
+        genPlayer.removeAttribute('src');
+        setTimeout(() => {
+          genVisualizer.src = filePath;
+          genPlayer.src = filePath;
+        }, 50);
       }, 100);
     }
   }
