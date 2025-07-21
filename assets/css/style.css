@@ -334,6 +334,12 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.avatar-box img {
+  border-radius: 20px;
+  display: block;
 }
 
 .info-content .name {
@@ -505,6 +511,18 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+
+.about-text a {
+  color: var(--orange-yellow-crayola);
+  text-decoration: none;
+  display: inline;
+  transition: color 0.25s ease;
+}
+
+.about-text a:hover {
+  color: var(--white-1);
+  text-decoration: underline;
+}
 
 
 
