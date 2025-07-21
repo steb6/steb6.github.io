@@ -23,6 +23,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!--
+    - MIDI player scripts
+  -->
+  <script src="https://unpkg.com/tone@14.7.58/build/Tone.js"></script>
+  <script src="https://unpkg.com/@magenta/music@1.21.0/es6/core.js"></script>
+  <script src="https://unpkg.com/html-midi-player@1.5.0"></script>
 </head>
 
 <body>
@@ -128,20 +135,38 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/in/stefano-berti-720217128/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/stefano.berti.75" target="_blank" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://www.instagram.com/ste_berti/" target="_blank" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://scholar.google.com/citations?user=wJ_9K6UAAAAJ&hl=it&oi=ao" target="_blank" class="social-link">
+              <ion-icon name="school-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.iit.it/it/people-details/-/people/stefano-berti" target="_blank" class="social-link">
+              <ion-icon name="business-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://openreview.net/profile?id=~Stefano_Berti1" target="_blank" class="social-link">
+              <ion-icon name="document-text-outline"></ion-icon>
             </a>
           </li>
 
@@ -178,11 +203,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>Publications</button>
           </li>
 
           <li class="navbar-item">
@@ -220,285 +241,6 @@
           </p>
         </section>
 
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
       </article>
 
 
@@ -529,41 +271,24 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title">Master Degree in Artificial Intelligence</h4>
 
-              <span>2007 — 2008</span>
+              <span>2018 — 2021</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Graduated on time with top marks from University of Pisa, completing a thesis on music generation that leads to a publication.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <h4 class="h4 timeline-item-title">Bachelor Degree in Computer Science</h4>
 
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
+              <span>2015 — 2018</span>
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                Graduated on time with top marks and honors from University of Genova.
               </p>
 
             </li>
@@ -586,42 +311,12 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">Ph.D. Student</h4>
 
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
+              <span>2022 — Present</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                My research focuses on Human-Robot Interaction tasks, including Action Recognition with an emphasis on Few-Shot Learning and Open-Set Detection, Focus Detection, and Human-Pose Estimation. I have applied the outcomes of my research to the iCub and ergoCub robot platforms in various demonstrations.
               </p>
 
             </li>
@@ -630,68 +325,6 @@
 
         </section>
 
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
       </article>
 
 
@@ -699,425 +332,363 @@
 
 
       <!--
-        - #PORTFOLIO
+        - #PUBLICATIONS
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="publications" data-page="publications">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Publications</h2>
         </header>
 
-        <section class="projects">
+        <section class="publications-list">
 
-          <ul class="filter-list">
+          <ul class="publications-timeline">
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
+            <li class="publication-item" data-publication-item>
+              <div class="publication-year">2024</div>
+              <div class="publication-image">
+                <img src="./assets/images/roman.jpg" alt="ROMAN 2024 Conference" width="80" class="publication-img-clickable" data-popup-img="./assets/images/roman.jpg">
               </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+              <div class="publication-content">
+                <p class="publication-text">
+                  <em>The impact of Compositionality in Zero-shot Multi-label action recognition for Object-based tasks.</em> Calabrese Carmela, Berti Stefano et al. 2024 33rd IEEE International Conference on Robot and Human Interactive Communication (ROMAN). IEEE, 2024.
+                </p>
+                <div class="publication-abstract" style="display: none;">
+                  <h5>Abstract</h5>
+                  <p>Addressing multi-label action recognition in videos represents a significant challenge for robotic applications in dynamic environments, especially when the robot is required to cooperate with humans in tasks that involve objects. Existing methods still struggle to recognize unseen actions or require extensive training data. To overcome these problems, we propose Dual-VCLIP, a unified approach for zero-shot multi-label action recognition. Dual-VCLIP enhances VCLIP, a zero-shot action recognition method, with the DualCoOp method for multi-label image classification. The strength of our method is that at training time it only learns two prompts, and it is therefore much simpler than other methods. We validate our method on the Charades dataset that includes a majority of object-based actions, demonstrating that - despite its simplicity - our method performs favorably with respect to existing methods on the complete dataset, and promising performance when tested on unseen actions. Our contribution emphasizes the impact of verb-object class-splits during robots' training for new cooperative tasks, highlighting the influence on the performance and giving insights into mitigating biases. Dataset splits and code are publicly available on the project's repository.</p>
+                  <p><strong>Conference:</strong> IEEE International Conference on Robot and Human Interactive Communication (ROMAN)</p>
+                  <p><strong>Keywords:</strong> Action Recognition, Zero-shot Learning, Multi-label Classification, Human-Robot Interaction</p>
+                  
+                  <div class="publication-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10731472/?casa_token=WVCLeYpG4vsAAAAA:wTZeVaNftzYDWAnkcyeMZxSRiHcnmFbGOWwAjeygyuP2lSqYGEdpySvCpmIIcMlarmyd_JnVpdKmnQ" target="_blank" class="arxiv-btn">
+                      <ion-icon name="document-text-outline"></ion-icon>
+                      IEEE Paper
+                    </a>
+                    <a href="https://github.com/hsp-iit/DualVCLIP" target="_blank" class="arxiv-btn">
+                      <ion-icon name="logo-github"></ion-icon>
+                      Code
+                    </a>
                   </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
                 </div>
-
-              </a>
+              </div>
+              <div class="publication-expand-btn">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+            <li class="publication-item" data-publication-item>
+              <div class="publication-year">2023</div>
+              <div class="publication-image">
+                <img src="./assets/images/concon-chi.png" alt="CVPR 2023 Conference" width="80" class="publication-img-clickable" data-popup-img="./assets/images/concon-chi.png">
+              </div>
+              <div class="publication-content">
+                <p class="publication-text">
+                  <em>ConCon-Chi: Concept-Context Chimera Benchmark for Personalized Vision-Language Tasks</em>, Rosasco Andrea, Berti Stefano, Pasquale Giulia et al. 2023 IEEE-RAS 22nd International Conference on Computer Vision and Pattern Recognition (CVPR). IEEE 2023
+                </p>
+                <div class="publication-abstract" style="display: none;">
+                  <h5>Abstract</h5>
+                  <p>While recent Vision-Language (VL) models excel at open-vocabulary tasks it is unclear how to use them with specific or uncommon concepts. Personalized Text-to-Image Retrieval (TIR) or Generation (TIG) are recently introduced tasks that represent this challenge where the VL model has to learn a concept from few images and respectively discriminate or generate images of the target concept in arbitrary contexts. We identify the ability to learn new meanings and their compositionality with known ones as two key properties of a personalized system. We show that the available benchmarks offer a limited validation of personalized textual concept learning from images with respect to the above properties and introduce ConCon-Chi as a benchmark for both personalized TIR and TIG designed to fill this gap. We modelled the new-meaning concepts by crafting chimeric objects and formulating a large varied set of contexts where we photographed each object. To promote the compositionality assessment of the learned concepts with known contexts we combined different contexts with the same concept and vice-versa. We carry out a thorough evaluation of state-of-the-art methods on the resulting dataset. Our study suggests that future work on personalized TIR and TIG methods should focus on the above key properties and we propose principles and a dataset for their performance assessment. Dataset: https://doi.org/10.48557/QJ1166 and code: https://github.com/hsp-iit/concon-chi_benchmark.</p>
+                  <p><strong>Conference:</strong> IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+                  <p><strong>Keywords:</strong> Vision-Language Models, Personalization, Benchmark, Concept Understanding</p>
+                  
+                  <div class="publication-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Rosasco_ConCon-Chi_Concept-Context_Chimera_Benchmark_for_Personalized_Vision-Language_Tasks_CVPR_2024_paper.html" target="_blank" class="arxiv-btn">
+                      <ion-icon name="document-text-outline"></ion-icon>
+                      CVPR Paper
+                    </a>
+                    <a href="https://github.com/hsp-iit/concon-chi_benchmark" target="_blank" class="arxiv-btn">
+                      <ion-icon name="logo-github"></ion-icon>
+                      Code
+                    </a>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
                 </div>
-
-              </a>
+              </div>
+              <div class="publication-expand-btn">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+            <li class="publication-item" data-publication-item>
+              <div class="publication-year">2022</div>
+              <div class="publication-image">
+                <img src="./assets/images/ososskar.png" alt="Humanoids 2022 Conference" width="80" class="publication-img-clickable" data-popup-img="./assets/images/ososskar.png">
+              </div>
+              <div class="publication-content">
+                <p class="publication-text">
+                  <em>One-shot open-set skeleton-based action recognition</em>, Berti Stefano, et al. 2022 IEEE-RAS 21st International Conference on Humanoid Robots (Humanoids). IEEE, 2022.
+                </p>
+                <div class="publication-abstract" style="display: none;">
+                  <h5>Abstract</h5>
+                  <p>Action recognition is a fundamental capability for humanoid robots to interact and cooperate with humans. This application requires the action recognition system to be designed so that new actions can be easily added, while "unknown" actions are identified and ignored. In recent years, deep-learning approaches represented the principal solution to the Action Recognition problem. However, most models often require a large dataset of manually-labeled samples. In this work we target One-Shot deep-learning models, because they can deal with just a single instance for class. Unfortunately, One-Shot models assume that, at inference time, the action to recognize falls into the support set and they fail when the action lies outside the support set. Few-Shot Open-Set Recognition (FSOSR) solutions attempt to address that flaw, but current solutions consider only static images and not sequences of images. Static images remain insufficient to discriminate actions such as sitting-down and standing-up. In this paper we propose a novel model that addresses the FSOSR problem with a One-Shot model that is augmented with a discriminator that rejects "unknown" actions. This model is useful for applications in humanoid robotics, because it allows to easily add new classes and determine whether an input sequence is among the ones that are known to the system. We show how to train the whole model in an end-to-end fashion and we perform quantitative and qualitative analyses. Finally, we provide real-world examples.</p>
+                  <p><strong>Conference:</strong> IEEE-RAS International Conference on Humanoid Robots (Humanoids)</p>
+                  <p><strong>Keywords:</strong> One-shot Learning, Open-set Recognition, Skeleton-based Action Recognition, Few-shot Learning</p>
+                  
+                  <div class="publication-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10000115?casa_token=0-qpiST04ccAAAAA:2cJu3ducfdQXvqI3GW9UQ_g64lli_iXsvDtF8KXQfaHh5zxBEwT5Wdqo3r8q2UBxs0n-KhR_mQNccg" target="_blank" class="arxiv-btn">
+                      <ion-icon name="document-text-outline"></ion-icon>
+                      IEEE Paper
+                    </a>
+                    <a href="https://github.com/steb6/ISBFSAR" target="_blank" class="arxiv-btn">
+                      <ion-icon name="logo-github"></ion-icon>
+                      Code
+                    </a>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
                 </div>
-
-              </a>
+              </div>
+              <div class="publication-expand-btn">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+            <li class="publication-item" data-publication-item>
+              <div class="publication-year">2022</div>
+              <div class="publication-image">
+                <img src="./assets/images/shape-completion.jpg" alt="Shape Completion Research" width="80" class="publication-img-clickable" data-popup-img="./assets/images/shape-completion.jpg">
+              </div>
+              <div class="publication-content">
+                <p class="publication-text">
+                  <em>Towards Confidence-guided Shape Completion for Robotic Applications</em> Rosasco Andrea, et al. 2022 IEEE-RAS 21st International Conference on Humanoid Robots (Humanoids). IEEE, 2022.
+                </p>
+                <div class="publication-abstract" style="display: none;">
+                  <h5>Abstract</h5>
+                  <p>Many robotic tasks involving some form of 3D visual perception greatly benefit from a complete knowledge of the working environment. However, robots often have to tackle unstructured environments and their onboard visual sensors can only provide incomplete information due to limited workspaces, clutter or object self-occlusion. In recent years, deep learning architectures for shape completion have begun taking traction as effective means of inferring a complete 3D object representation from partial visual data. Nevertheless, most of the existing state-of-the-art approaches provide a fixed output resolution in the form of voxel grids, strictly related to the size of the neural network output stage. While this is enough for some tasks, e.g. obstacle avoidance in navigation, grasping and manipulation require finer resolutions and simply scaling up the neural network outputs is computationally expensive. In this paper, we address this limitation by proposing an object shape completion method based on an implicit 3D representation providing a confidence value for each reconstructed point. As a second contribution, we propose a gradient-based method for efficiently sampling such implicit function at an arbitrary resolution, tunable at inference time. We experimentally validate our approach by comparing reconstructed shape with ground truth, and by deploying our shape completion algorithm in a robotic grasping pipeline. In both cases, we compare results with a state-of-the-art shape completion approach. The code is available at https://github.com/andrearosasco/hyperpcr.</p>
+                  <p><strong>Conference:</strong> IEEE-RAS International Conference on Humanoid Robots (Humanoids)</p>
+                  <p><strong>Keywords:</strong> Shape Completion, 3D Reconstruction, Confidence Estimation, Robotic Manipulation</p>
+                  
+                  <div class="publication-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10000218?casa_token=XnfzY8uZA2MAAAAA:DhAU0JHRYy9yvSnbaN7MLwg-5ryeX8117hRN4N0PUylJM9PYnjGfq1ZGf2bjfbbM3fyWpji461xwjA" target="_blank" class="arxiv-btn">
+                      <ion-icon name="document-text-outline"></ion-icon>
+                      IEEE Paper
+                    </a>
+                    <a href="https://github.com/andrearosasco/hyperpcr" target="_blank" class="arxiv-btn">
+                      <ion-icon name="logo-github"></ion-icon>
+                      Code
+                    </a>
                   </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
                 </div>
-
-              </a>
+              </div>
+              <div class="publication-expand-btn">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+            <li class="publication-item" data-publication-item>
+              <div class="publication-year">2021</div>
+              <div class="publication-image">
+                <img src="./assets/images/calliope.png" alt="Calliope - Music Generation Research" width="80" class="publication-img-clickable" data-popup-img="./assets/images/calliope.png">
+              </div>
+              <div class="publication-content">
+                <p class="publication-text">
+                  <em>Calliope--A Polyphonic Music Transformer</em>, Valenti Andrea, Stefano Berti, and Davide Bacciu. 2021 IEEE-RAS 20th International Conference on European Summit About Neural Networks (ESANN). IEEE, 2021.
+                </p>
+                <div class="publication-abstract" style="display: none;">
+                  <h5>Abstract</h5>
+                  <p>The polyphonic nature of music makes the application of deep learning to music modelling a challenging task. On the other hand, the Transformer architecture seems to be a good fit for this kind of data. In this work, we present Calliope, a novel autoencoder model based on Transformers for the efficient modelling of multi-track sequences of polyphonic music. The experiments show that our model is able to improve the state of the art on musical sequence reconstruction and generation, with remarkably good results especially on long sequences.</p>
+                  <p><strong>Conference:</strong> European Summit About Neural Networks (ESANN)</p>
+                  <p><strong>Keywords:</strong> Music Generation, Transformer Architecture, Polyphonic Music, Deep Learning</p>
+                  
+                  <div class="publication-links">
+                    <a href="https://arxiv.org/abs/2107.05546" target="_blank" class="arxiv-btn">
+                      <ion-icon name="document-text-outline"></ion-icon>
+                      ArXiv
+                    </a>
+                    <a href="https://github.com/steb6/Calliope" target="_blank" class="arxiv-btn">
+                      <ion-icon name="logo-github"></ion-icon>
+                      Code
+                    </a>
                   </div>
+                  
+                  <!-- MIDI Player Section -->
+                  <div class="midi-embed">
+                    <button type="button" class="midi-embed-collapsible">� Reconstruction Examples</button>
+                    <div class="midi-embed-content">
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Original</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_original.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_original.mid" sound-font controls></midi-player>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Reconstructed</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_reconstructed.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_reconstructed.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Original 1</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_original_1.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_original_1.mid" sound-font controls></midi-player>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Reconstructed 1</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_reconstructed_1.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_reconstructed_1.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Original 2</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_original_2.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_original_2.mid" sound-font controls></midi-player>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Reconstructed 2</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_reconstructed_2.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_reconstructed_2.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Original 3</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_original_3.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_original_3.mid" sound-font controls></midi-player>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Reconstructed 3</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/REC_reconstructed_3.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/REC_reconstructed_3.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <button type="button" class="midi-embed-collapsible">� Generated 2-Bar Songs</button>
+                    <div class="midi-embed-content">
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Generated Sample 1</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_1.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_1.mid" sound-font controls></midi-player>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Generated Sample 2</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_2.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_2.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Generated Sample 3</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_3.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_3.mid" sound-font controls></midi-player>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Generated Sample 4</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_4.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_4.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                    </div>
 
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+                    <button type="button" class="midi-embed-collapsible">🎵 Generated Songs Explorer (100 samples)</button>
+                    <div class="midi-embed-content">
+                      <div class="gen-explorer-controls">
+                        <button type="button" id="prevGenBtn">◀ Previous</button>
+                        <span id="genIndexDisplay">Sample 0 / 99</span>
+                        <button type="button" id="nextGenBtn">Next ▶</button>
+                        <input type="range" id="genSlider" min="0" max="99" value="0" step="1">
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label" id="genSampleLabel">Generated Sample 0</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer id="genVisualizer" src="./assets/audio/gen2/GEN_generated_0.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player id="genPlayer" src="./assets/audio/gen2/GEN_generated_0.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                    </div>
 
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                    <button type="button" class="midi-embed-collapsible">🔄 Latent Space Interpolation</button>
+                    <div class="midi-embed-content">
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Interpolation 1</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_int_1.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_int_1.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Interpolation 2</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_int_2.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_int_2.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Interpolation 3</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_int_3.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_int_3.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">Interpolation 4</div>
+                          <div class="midi-visualizer-wrapper">
+                            <midi-visualizer src="./assets/audio/2bar_int_4.mid" type="piano-roll" visualizer-options='{"noteHeight": 4}'></midi-visualizer>
+                          </div>
+                          <midi-player src="./assets/audio/2bar_int_4.mid" sound-font controls></midi-player>
+                        </div>
+                      </div>
+                    </div>
 
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <button type="button" class="midi-embed-collapsible">🎹 16-Bar Audio Comparison</button>
+                    <div class="midi-embed-content">
+                      <div class="midi-embed-row">
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">16-Bar Original (Audio)</div>
+                          <audio controls style="width: 100%; margin: 10px 0;">
+                            <source src="./assets/audio/16-bar-original.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                        <div class="midi-embed-item">
+                          <div class="midi-embed-label">16-Bar Reconstructed (Audio)</div>
+                          <audio controls style="width: 100%; margin: 10px 0;">
+                            <source src="./assets/audio/16-bar-reconstructed.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
                 </div>
-
-              </a>
+              </div>
+              <div class="publication-expand-btn">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
             </li>
 
           </ul>
@@ -1143,7 +714,7 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92282.1392597734!2d8.866909726562498!3d44.41149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d34152dcd49aad%3A0x236a84f11881620a!2sGenova%2C%20Italy!5e0!3m2!1sen!2sit!4v1642608789441!5m2!1sen!2sit"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
@@ -1176,6 +747,27 @@
     </div>
 
   </main>
+
+  <!--
+    - image popup modal
+  -->
+  <div class="image-modal-container" data-image-modal-container>
+
+    <div class="overlay" data-image-overlay></div>
+
+    <section class="image-modal">
+
+      <button class="modal-close-btn" data-image-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="image-modal-content">
+        <img src="" alt="" data-popup-modal-img>
+      </div>
+
+    </section>
+
+  </div>
 
 
 
