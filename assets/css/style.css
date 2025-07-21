@@ -2306,10 +2306,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 .midi-visualizer-wrapper midi-visualizer {
   border: none;
   margin: 0;
-  min-width: 600px; /* Reduced minimum width for mobile */
-  width: max-content;
+  min-width: 300px; /* Much smaller minimum for mobile */
+  width: 100%;
+  max-width: 100%; /* Force to container width */
   display: block !important;
-  max-width: none; /* Allow content to be wider than container */
 }
 
 .midi-embed midi-player {
@@ -2323,18 +2323,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Ensure MIDI visualizer SVG content is scrollable */
 .midi-embed midi-visualizer svg,
 .midi-visualizer-wrapper midi-visualizer svg {
-  min-width: 600px; /* Reduced for mobile */
-  width: max-content;
+  min-width: 300px; /* Much smaller for mobile */
+  width: 100%;
+  max-width: 100%; /* Force container constraint */
   height: 100%;
   display: block;
-  max-width: none; /* Allow content to extend beyond container */
 }
 
 /* Special SVG handling for single-item rows (latent space interpolation) */
 .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer svg {
-  min-width: 400px; /* Smaller for better fit */
+  min-width: 280px; /* Even smaller for single items */
   width: 100%;
-  max-width: 600px; /* Fixed maximum to prevent overflow */
+  max-width: 100%; /* Force constraint */
 }
 
 /* Specific handling for latent space interpolation and all single-item rows */
@@ -2346,15 +2346,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper {
   width: 100%;
-  max-width: 600px; /* Fixed maximum width */
+  max-width: 100%; /* Force full container width */
   overflow-x: auto;
   overflow-y: hidden;
 }
 
 .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
-  min-width: 400px; /* Smaller minimum for better fit */
+  min-width: 280px; /* Small minimum */
   width: 100%;
-  max-width: 600px; /* Match wrapper max-width */
+  max-width: 100%; /* Force container constraint */
 }
 
 /* Force horizontal scrolling for longer content */
@@ -2387,9 +2387,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 .midi-embed midi-visualizer,
 .midi-visualizer-wrapper midi-visualizer {
   /* Force consistent minimum widths */
-  min-width: 600px !important;
-  width: max-content !important;
-  max-width: none !important;
+  min-width: 300px !important; /* Much smaller default */
+  width: 100% !important;
+  max-width: 100% !important; /* Force container constraint */
   display: block !important;
 }
 
@@ -2527,34 +2527,36 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
   .midi-visualizer-wrapper {
-    max-width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
     /* Force scrollability */
     overflow-x: auto !important;
     overflow-y: hidden !important;
   }
   
   .midi-visualizer-wrapper midi-visualizer {
-    min-width: 400px !important; /* Smaller minimum for mobile */
-    width: max-content !important;
-    max-width: none !important;
+    min-width: 250px !important; /* Very small for tablets */
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .midi-embed midi-visualizer svg,
   .midi-visualizer-wrapper midi-visualizer svg {
-    min-width: 400px !important;
-    width: max-content !important;
-    max-width: none !important;
+    min-width: 250px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   /* Responsive latent space interpolation */
   .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper {
-    max-width: 100%; /* Full width on tablets */
+    max-width: 100% !important;
+    width: 100% !important;
   }
   
   .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
-    min-width: 350px;
-    width: 100%;
-    max-width: 100%;
+    min-width: 240px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .gen-explorer-controls {
@@ -2576,14 +2578,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 @media (max-width: 450px) {
   .midi-embed-item {
-    padding: 8px;
+    padding: 5px;
     min-width: 100%;
     /* Force container constraints */
     overflow: hidden !important;
   }
   
   .midi-embed midi-visualizer { 
-    height: 100px; 
+    height: 80px; /* Much smaller height */
   }
   
   .midi-visualizer-wrapper {
@@ -2591,36 +2593,81 @@ textarea.form-input::-webkit-resizer { display: none; }
     overflow-x: auto !important;
     overflow-y: hidden !important;
     max-width: 100% !important;
+    width: 100% !important;
   }
   
   .midi-visualizer-wrapper midi-visualizer {
-    min-width: 320px !important; /* Very small screens */
-    width: max-content !important;
-    max-width: none !important;
+    min-width: 200px !important; /* Very small screens */
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .midi-embed midi-visualizer svg,
   .midi-visualizer-wrapper midi-visualizer svg {
-    min-width: 320px !important;
-    width: max-content !important;
-    max-width: none !important;
+    min-width: 200px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   /* Small screen latent space interpolation */
   .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper {
-    max-width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   
   .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
-    min-width: 280px;
-    width: 100%;
-    max-width: 100%;
+    min-width: 200px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .midi-embed-content {
-    padding: 10px;
+    padding: 5px;
     /* Ensure content area doesn't overflow */
     overflow: hidden;
+  }
+}
+
+@media (max-width: 320px) {
+  .midi-embed-item {
+    padding: 3px;
+    min-width: 100%;
+    overflow: hidden !important;
+  }
+  
+  .midi-embed midi-visualizer { 
+    height: 60px; /* Very small height for tiny screens */
+  }
+  
+  .midi-visualizer-wrapper {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  .midi-visualizer-wrapper midi-visualizer {
+    min-width: 180px !important; /* Absolute minimum */
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .midi-embed midi-visualizer svg,
+  .midi-visualizer-wrapper midi-visualizer svg {
+    min-width: 180px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Extra small screen latent space interpolation */
+  .midi-embed-row .midi-embed-item:only-child .midi-visualizer-wrapper midi-visualizer {
+    min-width: 180px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .midi-embed-content {
+    padding: 3px;
   }
 }
 
