@@ -133,29 +133,48 @@ if (publicationItems.length > 0) {
 
 
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+// page navigation variables - wrapped in DOMContentLoaded to ensure elements exist
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    const navigationLinks = document.querySelectorAll("[data-nav-link]");
+    const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-if (navigationLinks.length > 0 && pages.length > 0) {
-  for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener("click", function () {
+    // add event to all nav link
+    if (navigationLinks && navigationLinks.length > 0 && pages && pages.length > 0) {
+      console.log("Navigation setup - found", navigationLinks.length, "nav links and", pages.length, "pages"); // Debug log
+      
+      for (let i = 0; i < navigationLinks.length; i++) {
+        if (navigationLinks[i]) {
+          navigationLinks[i].addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent any default behavior
+            
+            const targetPage = this.innerHTML.toLowerCase();
+            console.log("Clicked nav:", targetPage); // Debug log
 
-      for (let j = 0; j < pages.length; j++) {
-        if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
-          pages[j].classList.add("active");
-          navigationLinks[j].classList.add("active");
-          window.scrollTo(0, 0);
-        } else {
-          pages[j].classList.remove("active");
-          navigationLinks[j].classList.remove("active");
+            for (let j = 0; j < pages.length; j++) {
+              if (pages[j] && pages[j].dataset) {
+                if (targetPage === pages[j].dataset.page) {
+                  pages[j].classList.add("active");
+                  if (navigationLinks[j]) navigationLinks[j].classList.add("active");
+                  window.scrollTo(0, 0);
+                  console.log("Activated page:", pages[j].dataset.page); // Debug log
+                } else {
+                  pages[j].classList.remove("active");
+                  if (navigationLinks[j]) navigationLinks[j].classList.remove("active");
+                }
+              }
+            }
+
+          });
         }
       }
-
-    });
+    } else {
+      console.error("Navigation setup failed - nav links:", navigationLinks ? navigationLinks.length : 0, "pages:", pages ? pages.length : 0);
+    }
+  } catch (error) {
+    console.error("Navigation setup error:", error);
   }
-}
+});
 
 
 
